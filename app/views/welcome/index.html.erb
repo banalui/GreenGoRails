@@ -1,0 +1,19 @@
+<div class="welcomelabelwrapper">
+	<p class="mainwelcomelabel">Welcome to GreenGo</p>
+</div>
+<div class="welcomebuttonswrapper">
+	<%= link_to image_tag("partner200.jpg"), partner_path, class: "partnerimage" %>
+	<span class="welcomebuttonslabelpartner">Partner</span>
+	<%= link_to image_tag("hotel200.jpg"), main_path, class: "hotelimage" %>
+	<span class="welcomebuttonslabelhotel">Hotel</span>
+</div>
+<div class="loginbuttonwrapper">
+	<h6>
+    	<% if logged_in? %>
+      		<%= "Logged in as #{current_user.email}" %><br>
+      		<%= link_to "Logout", logout_path %>
+    	<% else %>
+      		<%= link_to "Login", login_path %>
+    	<% end %>
+	</h6>
+</div>

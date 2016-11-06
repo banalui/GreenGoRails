@@ -1,0 +1,245 @@
+*{
+	margin: 0;
+	padding: 0;
+	line-height: 0;
+}
+
+.container{
+	width: 1200px;
+	margin: auto;
+}
+
+.logolink{
+	margin-top: 5px;
+	height: 60px;
+	text-align: center;
+	width: 100%;
+}
+
+.mainwrapper{
+	overflow-x:auto; 
+	overflow-y:hidden;
+	width: 1200px;
+	height: 110px;
+	margin: auto;
+}
+
+.upperpartheading1, .upperpartheading2, .upperpartheading3, .upperpartheading4, .upperpartheading5{
+	display: inline-block;
+	width: 240px;
+	height: 110px;
+	margin-top: 30px;
+	position: absolute;
+	padding-left: 30px;
+}
+
+.howmanywrapper{
+	position: relative;
+}
+
+
+.upperpartheading2{
+	margin-left: 300px;
+}
+
+.upperpartheading3{
+	margin-left: 540px;
+}
+
+.upperpartheading4{
+	margin-left: 820px;
+}
+
+.upperpartheading5{
+	margin-left: 1080px;
+}
+
+/*
+.upperpartheading1{
+	background-color: orange;
+}
+.upperpartheading2{
+	background-color: blue;
+}
+.upperpartheading3{
+	background-color: yellow;
+}
+.upperpartheading4{
+	background-color: red;
+}
+*/
+
+.loginbutton, .searchbutton {
+    background-color: white;
+    color: black;
+    border: 2px solid #008CBA;
+    width: 150px;
+    height: 40px;
+}
+
+.loginbutton:hover, .searchbutton:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+.searchbutton{
+	display: inline-block;
+	width: 90px;
+}
+
+.group{
+	position: relative;
+	margin-bottom: 45px;
+}
+
+form{
+	height: 200px;
+}
+
+.animatedinput{
+	font-size: 18px;
+	padding: 10px 10px 10px 5px;
+	display: block;
+	width: 230px;
+	border: none;
+	border-bottom: 1px solid white;
+
+}
+
+.animatedinput:focus {
+	outline: none;
+}
+
+.mainlabel{
+	color: #999;
+	font-weight: normal;
+	position: absolute;
+	pointer-events: none;
+	left: 5px;
+	top: 10px;
+	transition: 0.2s ease all;
+	font-family: 'Work Sans', sans-serif;
+	font-size: 16px;
+	/*padding-left: 70px;*/
+}
+
+.animatedinput:focus ~ label, .animatedinput:valid ~ label{
+	top: -20px;
+	font-size: 18px;
+	/*color: #5264AE;*/
+	color: white;
+}
+
+.bar{
+	position: relative;
+	display: block;
+	width: 200px;
+}
+
+#wherebar{
+	width: 260px;
+}
+
+.bar:before, .bar:after{
+	content: '';
+	height: 2px;
+	width: 0;
+	bottom: 1px;
+	position: absolute;
+	background: #5264AE;
+	transition: 0.2s ease all;
+}
+
+.bar:before{
+	left : 50%;
+}
+
+.bar:after{
+	right: 50%;
+}
+
+.animatedinput:focus ~ .bar:before, .animatedinput:focus ~ .bar:after{
+	width: 50%;
+}
+
+.highlight{
+	position: absolute;
+	height: 60%;
+	width: 600px;
+	top: 25%;
+	left: 0;
+	pointer-events: none;
+	opacity: 0.5;
+}
+
+.animatedinput:focus ~ .highlight{
+	animation: inputHighlighter 0.3s ease;
+}
+
+@keyframes inputHighlighter{
+	from{
+		background: #5264AE;
+	}
+
+	to {
+		width: 0;
+		background: transparent;
+	}
+}
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.mainborder{
+	background-color: black;
+	height: 6px;
+}
+
+.image1{
+	float: left;
+}
+
+.image2{
+	float: left;
+}
+
+.image3{
+	float: right;
+}

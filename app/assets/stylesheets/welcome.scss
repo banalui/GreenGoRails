@@ -1,0 +1,64 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.welcomelabelwrapper{
+	margin: auto;
+	margin-top: 200px;
+	width: 500px;
+}
+.welcomebuttonswrapper{
+	margin: auto;
+	margin-top: 200px;
+	width: 500px;
+	position: relative;
+}
+
+.mainwelcomelabel{
+	font-family: 'Alfa Slab One', cursive;
+	font-size: 44px;
+	text-decoration: none;
+	text-align: center;
+	width: 500px;
+}
+
+.partnerimage{
+	position: absolute;
+}
+
+.hotelimage{
+	position: absolute;
+	left : 300px;
+}
+
+.partnerimage:hover, .hotelimage:hover{
+	opacity: 0.5;
+}
+
+.welcomebuttonslabelpartner, .welcomebuttonslabelhotel{
+	font-family: 'Roboto', sans-serif;
+	position: absolute;
+	font-size: 27px;
+	color: white;
+	top: 165px;
+}
+
+.welcomebuttonslabelpartner{
+	left: 100px;
+}
+
+.welcomebuttonslabelhotel{
+	left : 430px;
+}
+
+.loginbuttonwrapper{
+	width: 960px;
+	margin: auto;
+	text-align: center;
+	margin-top: 500px;
+	font-size: 30px;
+}
+
+.loginbuttonwrapper a{
+	text-decoration: none;
+}

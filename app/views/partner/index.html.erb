@@ -1,0 +1,55 @@
+<%= render partial: 'hotels/form' %>
+<br><p class="allhotels">All Hotels ( <%= @hotels.size %> )</p>
+<div class="box-table">
+	<table class="menutable">
+		<col width="150">
+  		<col width="150">
+  		<col width="150">
+  		<col width="150">
+  		<col width="150">
+  		<col width="150">
+  		<col width="150">
+  		<col width="150">
+  		<col width="150">
+  		<col width="150">
+		<thead>
+			<tr>
+				<td>Name</td>
+				<td>Street Address</td>
+				<td>City</td>
+				<td>State</td>
+				<td>Country</td>
+				<td>Zip Code</td>
+				<td>Phone</td>
+				<td>Stars</td>
+				<td>Eco Rate</td>
+				<td>Action Delete</td>
+			</tr>
+		</thead>
+		<% @hotels.each do |hotel| %>
+			<tr>
+				<td class="hotel-name"><%= hotel.name %></td>
+				<td class="hotel-street-address"><%= hotel.street_address %></td>
+				<td class="hotel-city"><%= hotel.city %></td>
+				<td class="hotel-state"><%= hotel.state %></td>
+				<td class="hotel-country"><%= hotel.country %></td>
+				<td class="hotel-zip"><%= hotel.zip_code %></td>
+				<td class="hotel-phone"><%= hotel.phone %></td>
+				<td class="hotel-stars"><%= hotel.stars %></td>
+				<td class="hotel-eco-rate"><%= hotel.eco_rate %></td>
+				<td class="hotel-delete"><%= link_to "Delete", hotel_path(hotel), method: :delete, data: {confirm: "Really delete the hotel?"} %></td>
+			</tr>
+		<% end %>
+	</table>
+</div>
+<br>
+<div class="logoutbuttonwrapper">
+	<h6>
+    	<% if logged_in? %>
+      		<%= "Logged in as #{current_user.email}" %><br>
+      		<%= link_to "Logout", logout_path %>
+    	<% else %>
+      		<%= link_to "Login", login_path %>
+    	<% end %>
+	</h6>
+</div>

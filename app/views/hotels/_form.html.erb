@@ -1,0 +1,17 @@
+<div class="hotel_form_wrapper">
+  <p class="addhotel">Add a Hotel</p><br>
+  <%= form_for (@hotel) do |f| %>
+      <div class="singleformwrapper"><%= f.label :name, "Name" %><%= f.text_field :name %></div>
+      <div class="singleformwrapper"><%= f.label :street_address, "Street Address"  %><%= f.text_field :street_address %></div>
+      <div class="singleformwrapper"><%= f.label :city, "City" %><%= f.text_field :city %></div>
+      <div class="singleformwrapper"><%= f.label :state, "State" %><%= f.text_field :state %></div>
+      <div class="singleformwrapper"><%= f.label :country, "Country" %><%= f.text_field :country %></div>
+      <div class="singleformwrapper"><%= f.label :zip_code, "Zip Code"  %><%= f.text_field :zip_code %></div>
+      <div class="singleformwrapper"><%= f.label :phone, "Phone" %><%= f.text_field :phone %></div>
+      <div class="singleformwrapper"><%= f.label :stars, "Stars" %><%= f.text_field :stars %></div>
+      <div class="singleformwrapper"><%= f.label :eco_rate, "Eco Rate"  %><%= f.text_field :eco_rate %></div>
+      <div class="submitwrapper">
+        <%= f.submit 'Submit' %>
+      </div>
+  <% end %>
+</div>
