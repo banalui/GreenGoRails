@@ -1,8 +1,5 @@
 class HotelsController < ApplicationController
 	include HotelsHelper
-
-	http_basic_authenticate_with name: "admin", password: "SummerTime1366"
-
 	def new
 		@hotel = Hotel.new
 	end

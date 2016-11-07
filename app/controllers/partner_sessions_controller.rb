@@ -3,7 +3,7 @@ class PartnerSessionsController < ApplicationController
   end
 
   def create
-    if login(params[:username], params[:password])
+    if login(params[:email], params[:password])
       redirect_back_or_to(partner_path, notice: 'Logged in successfully.')
     else
       flash.now.alert = "Login failed."
