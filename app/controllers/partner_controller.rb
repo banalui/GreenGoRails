@@ -1,5 +1,4 @@
 class PartnerController < ApplicationController
-
 	before_filter :require_login
 	
 	def require_login
