@@ -1,5 +1,15 @@
 class HotelsController < ApplicationController
 	include HotelsHelper
+	
+	before_filter :require_login
+	
+	def require_login
+    	unless logged_in?
+      		flash.notice = "You must be logged in to access this section"
+      		redirect_to root_path
+    	end
+    end
+
 	def new
 		@hotel = Hotel.new
 	end

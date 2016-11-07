@@ -2,8 +2,13 @@
 	<p class="mainwelcomelabel">Welcome to GreenGo</p>
 </div>
 <div class="welcomebuttonswrapper">
-	<%= link_to image_tag("partner200.jpg"), partner_path, class: "partnerimage" %>
-	<span class="welcomebuttonslabelpartner">Partner</span>
+	<% if logged_in? %>
+      		<%= link_to image_tag("partner200.jpg"), partner_path, class: "partnerimage" %>
+      		<span class="welcomebuttonslabelpartner">Partner</span>
+    <% else %>
+      		<%= link_to image_tag("partner200.jpg"), root_path, class: "partnerimage" %>
+      		<span class="welcomebuttonslabelpartner">Partner</span>
+    <% end %>
 	<%= link_to image_tag("hotel200.jpg"), main_path, class: "hotelimage" %>
 	<span class="welcomebuttonslabelhotel">Hotel</span>
 </div>
